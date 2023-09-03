@@ -12,38 +12,43 @@
 </head>
 <body>
     <!-- ghost div to check tailwind class names -->
-    <div class=" "></div>
+    <!-- <div class=""></div> -->
     <!-- screen -->
-    <div class="max-w-[1920px] aspect-video block mx-auto bg-grayDarker font-titillium">
+    <div class="max-w-[1920px] aspect-video block mx-auto bg-grayDarker z[-1] font-titillium">
 
         <!-- header -->
         <header class="sticky top-0">
 
             <!-- navigation -->
-            <nav id="nav-bar">
-                <div class="flex max-h-20 px-10 justify-between">
-                    <!-- home-icon -->
-                    <div class="py-5">
-                        <a href="#">
-                            <img class="w-10 h-10 border rounded-full border-1 hover:border-2" src="img/home-icon.png" alt="Fauzan-JM">
-                        </a>
+            <nav class="px-10 py-4 sm:flex sm:items-center sm:justify-between" id="nav-bar">
+                <!-- home-icon -->
+                <div class="flex justify-between">
+                    <a href="#">
+                        <img class="w-10 h-10 inline border rounded-full border-1 hover:border-2" src="img/home-icon.png" alt="Fauzan-JM">
+                    </a>
+                    <!-- hamburger button -->
+                    <div class="sm:hidden inline-block text-grayLight hover:text-slate-50" id="burger-button">
+                        <div class="" id="burger-svg">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M7.95 11.95h32m-32 12h32m-32 12h32"/></svg>
+                            </a>
+                        </div>
+                        <div class="hidden" id="close-svg">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/><path fill="currentColor" d="m12 14.121l5.303 5.304a1.5 1.5 0 0 0 2.122-2.122L14.12 12l5.304-5.303a1.5 1.5 0 1 0-2.122-2.121L12 9.879L6.697 4.576a1.5 1.5 0 1 0-2.122 2.12L9.88 12l-5.304 5.303a1.5 1.5 0 1 0 2.122 2.122L12 14.12Z"/></g></svg>
+                            </a>
+                        </div>
                     </div>
-                    <!-- hamburger button
-                    <div class="sm:hidden py-5">
-                        <button class="p-2 bg-white border-black">Test</button>
-                        <div></div>
-                    </div>
-
-                    <!-- right/drop down navbar -->
-                    <!-- <ul class="w-full h-screen sm:h-auto z-[-1] sm:z-auto sm:flex sm:gap-10 sm:static absolute left-0 text-grayLight sm:items-center sm:justify-end font-semibold text-2xl sm:text-lg bg-slate-700 bg-opacity-80 text-center">
-                        <li class="mt-20 mb-3 sm:my-0 sm:gap-10 sm:px-0">
-                            <a href="#" class="hover:underline">Quiz 1</a>
-                        </li>
-                        <li class="mb-3 sm:my-0 sm:gap-10 sm:px-0">
-                            <a href="#" class="hover:underline">Quiz 2</a>
-                        </li>
-                    </ul> -->
                 </div>
+                <!-- right navbar -->
+                <ul class="text-grayLight sm:flex sm:items-center sm:gap-10 z-[-1] sm:z-auto sm:static absolute bg-slate-800 sm:bg-transparent w-full sm:w-auto left-0 top-16 text-center opacity-0 sm:opacity-100 transition-all ease-in duration-200" id="nav-options">
+                    <li class="my-10 sm:my-0">
+                        <a href="#" class="text-xl hover:text-slate-50 hover:font-bold">Quiz 1<br><span class="sm:hidden">(Easy)</span></a>
+                    </li>
+                    <li class="mb-10 sm:my-0">
+                        <a href="#" class="text-xl hover:text-slate-50 hover:font-bold">Quiz 2<br><span class="sm:hidden">(Hard? nah, Easy)</span></a>
+                    </li>
+                </ul>
             </nav>
 
         </header>
@@ -85,7 +90,7 @@
             <div class="flex bg-blackSoft justify-between">
                 <div class="flex px-10 py-5 items-center text-grayLight">
                     <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="currentColor" d="M10.08 10.86c.05-.33.16-.62.3-.87s.34-.46.59-.62c.24-.15.54-.22.91-.23c.23.01.44.05.63.13c.2.09.38.21.52.36s.25.33.34.53s.13.42.14.64h1.79c-.02-.47-.11-.9-.28-1.29s-.4-.73-.7-1.01s-.66-.5-1.08-.66s-.88-.23-1.39-.23c-.65 0-1.22.11-1.7.34s-.88.53-1.2.92s-.56.84-.71 1.36S8 11.29 8 11.87v.27c0 .58.08 1.12.23 1.64s.39.97.71 1.35s.72.69 1.2.91c.48.22 1.05.34 1.7.34c.47 0 .91-.08 1.32-.23s.77-.36 1.08-.63s.56-.58.74-.94s.29-.74.3-1.15h-1.79c-.01.21-.06.4-.15.58s-.21.33-.36.46s-.32.23-.52.3c-.19.07-.39.09-.6.1c-.36-.01-.66-.08-.89-.23c-.25-.16-.45-.37-.59-.62s-.25-.55-.3-.88s-.08-.67-.08-1v-.27c0-.35.03-.68.08-1.01zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8z"/></svg>
-                    <span class="text-xl md:text-4xl">ontact me</span>
+                    <span class="text-xl md:text-4xl ">ontact me</span>
                 </div>
                 <div class="flex pr-10 gap-3 sm:gap-10 items-center py-5">
                     <a href="https://www.instagram.com/fauzanjumdinhar/">
