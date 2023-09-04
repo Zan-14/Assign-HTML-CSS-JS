@@ -8,18 +8,18 @@
 */
 
 // Prompt and Alert before starting the game
-// let rules = prompt("How many times do you refresh this page? ( 0 - 10 )");
+let rules = prompt("How many times do you refresh this page? ( 0 - 10 )");
 
-// if (rules >= 0 && rules < 4 && rules != "") {
-//     alert("Okay, go ahead!")
+if (rules >= 0 && rules < 4 && rules != "" && rules == null) {
+    alert("Okay, go ahead!")
 
-// } else if (rules >=4 && rules <= 10) {
-//     alert("You lost already......")
+} else if (rules >=4 && rules <= 10) {
+    alert("You have lost! The limit is 3 times :(")
 
-// } else {
-//     alert("Refresh the page again and input the correct number, your chance is limited")
+} else {
+    alert("Refresh the page again and input the correct number, your chance is limited")
 
-// }
+}
 
 
 // Show local time
