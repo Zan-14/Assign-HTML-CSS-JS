@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- ghost div to check tailwind class names -->
-    <!-- <div class=""></div> -->
+
     <!-- screen -->
     <div class="max-w-[1920px] aspect-video block mx-auto bg-grayDarker z[-1] font-titillium">
 
@@ -20,31 +19,31 @@
         <header class="sticky top-0">
 
             <!-- navigation -->
-            <nav class="px-10 py-4 sm:flex sm:items-center sm:justify-between" id="nav-bar">
+            <nav class="px-10 py-10 sm:py-5 sm:flex sm:items-center sm:justify-between" id="nav-bar">
                 <!-- home-icon -->
                 <div class="flex justify-between">
-                    <div class="flex gap-10 items-center">
-                        <a href="#">
+                    <div class="flex gap-5 sm:gap-10 items-center">
+                        <a href="#" class="pb-2 sm:pb-0">
                             <img class="w-10 h-10 inline border rounded-full border-1 hover:border-2" src="img/home-icon.png" alt="Fauzan-JM">
                         </a>
-                        <div class="text-grayLight" id="real-time"></div>
+                        <div class="text-grayLight sm:pt-1 pb-1 sm:pb-0" id="real-time"></div>
                     </div>
                     <!-- hamburger button -->
                     <div class="sm:hidden inline-block text-grayLight hover:text-slate-50" id="burger-button">
                         <div class="" id="burger-svg">
                             <button>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M7.95 11.95h32m-32 12h32m-32 12h32"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M7.95 11.95h32m-32 12h32m-32 12h32"/></svg>
                             </button>
                         </div>
                         <div class="hidden" id="close-svg">
                             <button>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/><path fill="currentColor" d="m12 14.121l5.303 5.304a1.5 1.5 0 0 0 2.122-2.122L14.12 12l5.304-5.303a1.5 1.5 0 1 0-2.122-2.121L12 9.879L6.697 4.576a1.5 1.5 0 1 0-2.122 2.12L9.88 12l-5.304 5.303a1.5 1.5 0 1 0 2.122 2.122L12 14.12Z"/></g></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/><path fill="currentColor" d="m12 14.121l5.303 5.304a1.5 1.5 0 0 0 2.122-2.122L14.12 12l5.304-5.303a1.5 1.5 0 1 0-2.122-2.121L12 9.879L6.697 4.576a1.5 1.5 0 1 0-2.122 2.12L9.88 12l-5.304 5.303a1.5 1.5 0 1 0 2.122 2.122L12 14.12Z"/></g></svg>
                             </button>
                         </div>
                     </div>
                 </div>
                 <!-- right navbar -->
-                <ul class="text-grayLight sm:flex sm:items-center sm:gap-10 z-[-1] sm:z-auto sm:static absolute bg-slate-800 sm:bg-transparent w-full sm:w-auto left-0 top-16 text-center opacity-0 sm:opacity-100" id="nav-options">
+                <ul class="text-grayLight sm:pt-2 sm:flex sm:items-center my-2 sm:my-0 sm:gap-10 z-10 sm:z-auto sm:static absolute bg-slate-800 sm:bg-transparent w-full sm:w-auto left-0 top-20 text-center opacity-0 sm:opacity-100" id="nav-options">
                     <li class="my-10 sm:my-0">
                         <a href="#" class="text-xl hover:text-slate-50 hover:font-bold">Quiz 1<br><span class="sm:hidden">(Easy)</span></a>
                     </li>
@@ -57,7 +56,6 @@
         </header>
 
         <!-- main -->
-        <!-- check the session 18 video to know how to make a certain text/element disappeared after certain seconds (around 1:30:00) -->
         <main>
             <!-- hero Section -->
             <div class="flex flex-col h-fit px-10 py-10 items-center text-grayLight lg:flex-row xl:h-[95vh]">
@@ -70,22 +68,35 @@
                 </div>
 
                 <!-- text -->
-                <div class="flex-col items-center lg:max-w-xl lg:pt-32 xl:p-0">
+                <div class="flex-col items-center lg:max-w-xl lg:pt-32 xl:p-0" id="hero-text">
+                    <!-- before 7 seconds -->
                     <div class="hidden py-4 text-center text-4xl font-extrabold lg:inline-block lg:p-0 lg:text-6xl lg:text-left">
                         <h1 class="">Hmmm.... </h1>
                     </div>
                     <div class="lg:p-4 text-justify sm:text-left">
-                        <p class="pb-4 text-2xl lg:text-base text-center lg:text-left">Okay, you have 5 seconds to read this.</p>
+                        <p class="pb-4 text-2xl lg:text-xl text-center lg:text-left font-bold underline">you have 7 seconds to read this.</p>
                         <p class="lg:text-lg lg:text-left">I am <span class="font-semibold">Fau
                             <span class="text-3xl font-bold">ZAN</span> Jumdinhar M</span>
                             . The "M" is not important. Anyway, just call me 
                             <span class="text-3xl font-bold">ZAN</span>.<br><span class="font-bold underline">23</span> Years old single who has a bachelor of aquatic resources management.<br> I live in a town called <span class="font-bold underline">Blora</span>. You maybe don't know where is it. Blora is a <span class="font-bold underline">regency</span> in Central Java, Indonesia.<br><br> No computer science degree or programming experience, but <b>confident</b> in the ability and passion to learn something new and become good at it. An open-to-criticism individual who will adapt quickly and take any chance to gain more <b>software engineering knowledge</b>.
-                            <span class="text-xs">(This paragraph is not important, actually........sorry)</span> Good luck!!!
+                            <span class="text-xs">(This paragraph is not important, actually........sorry...)</span>
                         </p>
                     </div>
                 </div>
-            </div>
+                <!-- after 7 seconds -->
+                <div class="hidden flex-col items-center lg:max-w-xl lg:pt-32 xl:p-0" id="hero-hidden-text">
+                    <div class="py-4 text-center text-4xl font-extrabold lg:inline-block lg:p-0 lg:text-6xl lg:text-left">
+                        <h1 class="">Time out!</h1>
+                        <h1 class="pt-10">Good luck with the quiz!</h1>
+                        <a href="#" class="text-xl hover:underline">Start the Quiz!</a>
+                    </div>
+                </div>
 
+            </div>
+            <!-- Quiz 1 -->
+            <div class="flex flex-col h-fit px-10 py-10 items-center bg-slate-900 text-grayLight lg:flex-row xl:h-[95vh]">
+                
+            </div>
         </main>
 
         <!-- footer -->
