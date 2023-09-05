@@ -1,13 +1,39 @@
-/* Features that use JavaScript:
+/* 
+I am using CLI Tailwind (Not CDN)
 
-1. Hamburger button on the navbar
-2. Change navbar color when scrolling
-3. Erase a certain text after a certain amount of time
-4. Create a mini quiz
-5. Show current time (real time)
+Features that use JavaScript:
+
+1. Prompt before showing the landing page
+- prompt
+- if statement > else if statement
+
+2. Show current time (real time)
+- Get elements from DOM
+- setInterval function 
+
+3. Hamburger button
+- Get elements from DOM
+- addEventListener method with if else statement in it
+- Change the SVG element every click (function in number 4)
+
+4. Change navbar color when scrolling 
+- Get elements from DOM
+- window scrollY function
+- Nested if statement
+
+5.Erase a certain text after a certain amount of time
+- setTimeout function
+- Get elements from DOM
+- Manipulate tailwind class
+
+6. Create a mini quiz
+- Get elements from DOM
+- for loop with nested function in it
+- Locate date from an array (DOM Note List)
+- innerHTML property
 */
 
-// Prompt and Alert before starting the game
+// 1. Prompt and Alert before starting the game
 let rules = prompt("How many times do you refresh this page? ( 0 - 10 )");
 
 if (rules >= 0 && rules < 4 && rules != "") {
@@ -21,7 +47,7 @@ if (rules >= 0 && rules < 4 && rules != "") {
 }
 
 
-// Show local time
+// 2. Show local time
 let realTime = document.getElementById('real-time');
 setInterval(() => {
     let time = new Date();
@@ -29,7 +55,7 @@ setInterval(() => {
 }, 1000);
 
 
-//Hamburger button function
+//3. Hamburger button function
 const bgrButton = document.querySelector('#burger-button');
 const svgBurger = document.querySelector('#burger-svg');
 const svgClose = document.querySelector('#close-svg');
@@ -50,7 +76,7 @@ bgrButton.addEventListener('click',function () {
 });
 
 
-// Change navbar color when scrolling and how to get tailwind class
+// 4. Change navbar color when scrolling and how to get tailwind class
 let headElm = document.getElementById('nav-bar');
 
 window.addEventListener('scroll', function() {
@@ -71,7 +97,7 @@ window.addEventListener('scroll', function() {
 });
 
 
-// Erase text from the Hero Section
+// 5. Erase text from the Hero Section
 setTimeout(function() {
     const heroText = document.getElementById('hero-text');
     const hiddenText = document.getElementById('hero-hidden-text');
@@ -80,7 +106,7 @@ setTimeout(function() {
 }, 7000);
 
 
-// Make a quiz
+// 6. Make a quiz
 
 // Quiz 1
 let questionHidden1 = document.querySelector('#question-box-1');
