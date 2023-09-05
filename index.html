@@ -31,14 +31,14 @@
                     </div>
                     <!-- hamburger button -->
                     <div class="sm:hidden inline-block text-grayLight hover:text-slate-50" id="burger-button">
-                        <div class="" id="burger-svg">
+                        <div id="burger-svg">
                             <button>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M7.95 11.95h32m-32 12h32m-32 12h32"/></svg>
                             </button>
                         </div>
                         <div class="hidden" id="close-svg">
-                            <button>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/><path fill="currentColor" d="m12 14.121l5.303 5.304a1.5 1.5 0 0 0 2.122-2.122L14.12 12l5.304-5.303a1.5 1.5 0 1 0-2.122-2.121L12 9.879L6.697 4.576a1.5 1.5 0 1 0-2.122 2.12L9.88 12l-5.304 5.303a1.5 1.5 0 1 0 2.122 2.122L12 14.12Z"/></g></svg>
+                            <button class="w-full h-auto">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6L6.4 19Z"/></svg>
                             </button>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
             <!-- hero Section -->
             <div class="flex flex-col h-fit px-10 py-10 items-center text-grayLight lg:flex-row xl:h-[95vh]">
                 <div class="lg:hidden py-10 text-center text-4xl font-extrabold lg:p-0 lg:text-6xl lg:text-left">
-                    <h1 class="">Hmmm.... </h1>
+                    <h1>Hmmm.... </h1>
                 </div>
 
                 <!-- image -->
@@ -91,187 +91,290 @@
                 <!-- after 7 seconds -->
                 <div class="hidden flex-col items-center lg:max-w-xl lg:pt-32 xl:p-0" id="hero-hidden-text">
                     <div class="py-4 text-center text-4xl font-extrabold lg:inline-block lg:p-0 lg:text-6xl lg:text-left">
-                        <h1 class="">Time out!</h1>
+                        <h1>Time out!</h1>
                         <h1 class="pt-10">Good luck with the quiz!</h1>
-                        <a href="#" class="text-xl hover:underline">Start the Quiz!</a>
+                        <a href="#quiz-1" class="text-xl hover:underline">Start the Quiz!</a>
                     </div>
                 </div>
-
             </div>
 
             <!-- Quiz 1 -->
-            <div class="flex flex-col h-fit px-10 py-10 justify-center items-center bg-slate-900 text-black lg:flex-row xl:h-screen rounded-es-[500px]" id="quiz-1">
-                <div class="flex w-5/6 bg-white rounded border-8 border-black">
-                    <div class="sm:w-3/6 flex flex-col justify-center text-center py-10 px-20">
-                        <h1 class="text-6xl font-bold text-slate-900 py-2 underline underline-offset-8">Quiz 1</h1>
-                        <p class="text-3xl py-3">Let's see how far do you remember my 7 seconds information...&#128513;</p>
-                        <p class="text-xl pt-8 pb-3">&#9888; Once you click the answer, the next question will appear, so be careful. &#128521;</p>
+            <div class="flex flex-col h-screen px-10 py-10 justify-center items-center bg-slate-900 text-black xl:flex-row sm:h-screen sm:rounded-es-full" id="quiz-1">
+                <div class="flex flex-col xl:flex-row w-full xl:w-5/6 bg-white rounded border-8 border-black">
+                    <div class="xl:w-3/6 flex flex-col justify-center text-center  xl:py-10 px-5 xl:px-20">
+                        <h1 class="text-4xl xl:text-6xl font-bold text-slate-900 py-5 sm:py-2 underline underline-offset-8">Quiz 1</h1>
+                        <p class="text-lg xl:text-3xl py-3">Let's see how far do you remember my 7 seconds information...&#128513;</p>
+                        <p class="text-base sm:text-xl px-5 xl:pt-8 pb-10 xl:pb-3">&#9888; Once you click the answer, the next question will appear, so be careful. &#128521;</p>
                     </div>
-                    <div class="p-1 bg-yellow-950 my-5"></div>
+
+                    <div class="p-1 bg-yellow-950 mx-5 sm:my-5 xl:mx-0"></div>
 
                     <!-- Question 1 -->
-                    <div class="sm:w-3/6 flex flex-col justify-center text-center py-10 px-20">
-                        <div class="flex flex-col justify-center">
-                            <h3 class="text-3xl font-bold py-2">Question 1</h3>
+                    <div class="xl:w-3/6 flex flex-col justify-center text-center py-10 px-20" id="question-box-1">
+                        <div class=" flex flex-col">
+                            <h3 class="text-xl xl:text-3xl font-bold py-2">Question 1</h3>
                             <p class="py-3 font-semibold">1. What is my nickname?</p>
-                            <div class="text-left px-32">
-                                <input class="mt-5" type="radio" name="question1"> Har<br>
-                                <input class="mt-5" type="radio" name="question1"> M<br>
-                                <input class="mt-5" type="radio" name="question1"> Fauza<br>
-                                <input class="mt-5" type="radio" name="question1"> Zan<br>
+                            <div class="flex flex-col item-center text-left mx-auto">
+                                <span class="py-2">
+                                    <input class="" type="checkbox" name="question1"> Har
+                                </span>
+                                <span class="py-2">
+                                    <input class="" type="checkbox" name="question1"> M
+                                </span>
+                                <span class="py-2">
+                                    <input class="" type="checkbox" name="question1"> Fauza
+                                </span>
+                                <span class="py-2">
+                                    <input class="" type="checkbox" name="question1" id="correct1"> Zan
+                                </span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Question 2 -->
-                    <div class="hidden sm:w-3/6 flex flex-col justify-center text-center py-10 px-20">
-                        <div class="flex flex-col justify-center">
-                            <h3 class="text-3xl font-bold py-2">Question 2</h3>
+                    <div class="hidden xl:w-3/6 flex flex-col justify-center text-center py-10 px-20" id="question-box-2">
+                        <div class="flex flex-col">
+                            <h3 class="text-xl xl:text-3xl font-bold py-2">Question 2</h3>
                             <p class="py-3 font-semibold">2. What is my full name?</p>
-                            <div class="text-left px-32">
-                                <input class="mt-5" type="radio" name="question2"> Fauzan Juminhar M<br>
-                                <input class="mt-5" type="radio" name="question2"> Fauza Jumdinar M<br>
-                                <input class="mt-5" type="radio" name="question2"> Fauzan Jumdinhar M<br>
-                                <input class="mt-5" type="radio" name="question2"> Everything is wrong &#128545;<br>
+                            <div class="flex flex-col item-center text-left mx-auto">
+                                <span class="py-2">
+                                    <input type="checkbox" name="question2"> Fauzan Juminhar M
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question2"> Fauza Jumdinar M
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question2" id="correct2"> Fauzan Jumdinhar M
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question2"> Everything is wrong &#128545;
+                                </span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Question 3 -->
-                    <div class="hidden sm:w-3/6 flex flex-col justify-center text-center py-10 px-20">
-                        <div class="flex flex-col justify-center">
-                            <h3 class="text-3xl font-bold py-2">Question 3</h3>
+                    <div class="hidden xl:w-3/6 flex flex-col justify-center text-center py-10 px-20" id="question-box-3">
+                        <div class="flex flex-col">
+                            <h3 class="text-xl xl:text-3xl font-bold py-2">Question 3</h3>
                             <p class="py-3 font-semibold">3. How old am I?</p>
-                            <div class="text-left px-32">
-                                <input class="mt-5" type="radio" name="question3"> 23<br>
-                                <input class="mt-5" type="radio" name="question3"> 25<br>
-                                <input class="mt-5" type="radio" name="question3"> 22<br>
-                                <input class="mt-5" type="radio" name="question3"> 24<br>
-                            </div>
+                            <div class="flex flex-col item-center text-left mx-auto">
+                                <span class="py-2">
+                                    <input type="checkbox" name="question3" id="correct3"> 23
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question3"> 25
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question3"> 22
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question3"> 24
+                                </span>
+                        </div>
                         </div>
                     </div>
 
                     <!-- Question 4 -->
-                    <div class="hidden sm:w-3/6 flex flex-col justify-center text-center py-10 px-20">
-                        <div class="flex flex-col justify-center">
-                            <h3 class="text-3xl font-bold py-2">Question 4</h3>
+                    <div class="hidden xl:w-3/6 flex flex-col justify-center text-center py-10 px-20" id="question-box-4">
+                        <div class="flex flex-col">
+                            <h3 class="text-xl xl:text-3xl font-bold py-2">Question 4</h3>
                             <p class="py-3 font-semibold">4. Where do I live?</p>
-                            <div class="text-left px-32">
-                                <input class="mt-5" type="radio" name="question4"> Jakarta<br>
-                                <input class="mt-5" type="radio" name="question4"> Blitar<br>
-                                <input class="mt-5" type="radio" name="question4"> Blora<br>
-                                <input class="mt-5" type="radio" name="question4"> Bandung<br>
+                            <div class="flex flex-col item-center text-left mx-auto">
+                                <span class="py-2">
+                                    <input type="checkbox" name="question4"> Jakarta
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question4"> Blitar
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question4" id="correct4"> Blora
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question4"> Bandung
+                                </span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Question 5 -->
-                    <div class="hidden sm:w-3/6 flex flex-col justify-center text-center py-10 px-20">
-                        <div class="flex flex-col justify-center">
-                            <h3 class="text-3xl font-bold py-2">Question 5</h3>
+                    <div class="hidden xl:w-3/6 flex flex-col justify-center text-center py-10 px-20" id="question-box-5">
+                        <div class="flex flex-col">
+                            <h3 class="text-xl xl:text-3xl font-bold py-2">Question 5</h3>
                             <p class="py-3 font-semibold">5. I graduated from...</p>
-                            <div class="text-left px-32">
-                                <input class="mt-5" type="radio" name="question5"> Universitas Gunadarma<br>
-                                <input class="mt-5" type="radio" name="question5"> Universitas Gadjah Mada<br>
-                                <input class="mt-5" type="radio" name="question5"> Universitas Gunungjati<br>
-                                <input class="mt-5" type="radio" name="question5"> Institut Teknologi Bandung<br>
+                            <div class="flex flex-col item-center text-left mx-auto">
+                                <span class="py-2">
+                                    <input type="checkbox" name="question5"> Universitas Gunadarma
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question5" id="correct5"> Universitas Gadjah Mada
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question5"> Universitas Gunungjati
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question5"> Institut Teknologi Bandung
+                                </span>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Button to Quiz 2 -->
+                    <div class="hidden xl:w-3/6 flex flex-col justify-center text-center py-10 px-20" id="button-quiz-2">
+                        <div class="flex flex-col">
+                            <h3 class="text-xl xl:text-3xl font-bold py-2">You have finished</h3>
+                            <a href="#quiz-2">
+                                <button class="py-3 font-semibold w-4/6 mx-auto bg-slate-900 text-grayLight" type="submit" name="submit">Next Quiz!</button>
+                            </a>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
+
             <!-- Quiz 2 -->
-            <div class="flex flex-col h-fit px-10 py-10 justify-center items-center bg-grayDarker text-black rounded-lg lg:flex-row xl:h-screen" id="quiz-2">
-                <div class="flex w-5/6 bg-white rounded border-8 border-black">
-                    <div class="sm:w-3/6 flex flex-col justify-center text-center py-10 px-20">
-                        <h1 class="text-6xl font-bold text-slate-900 py-2 underline underline-offset-8">Quiz 2</h1>
-                        <p class="text-3xl py-3">Congrats for finishing the Quiz 1. Here is the section to know about the bootcamp program that I joined &#9749;</p>
-                        <p class="text-xl pt-8 pb-3">&#9888; Once you click the answer, the next question will appear, so be careful. &#128521;</p>
+            <div class=" flex flex-col h-screen px-10 py-10 justify-center items-center bg-grayDarker text-black xl:flex-row sm:h-screen sm:rounded-es-full" id="quiz-2">
+                <div class="flex flex-col xl:flex-row w-full xl:w-5/6 bg-white rounded border-8 border-black">
+                    <div class="xl:w-3/6 flex flex-col justify-center text-center xl:py-10 px-5 xl:px-20">
+                        <h1 class="text-4xl xl:text-6xl font-bold text-orange-900 py-5 sm:py-2 underline underline-offset-8">Quiz 2</h1>
+                        <p class="text-lg xl:text-2xl py-3">Congrats for finishing the Quiz 1. Here is the section to know about the bootcamp program that I joined &#9749;</p>
+                        <p class="text-base sm:text-xl px-5 xl:pt-8 pb-10 xl:pb-3">&#9888; Once you click the answer, the next question will appear, so be careful. &#128521;</p>
                     </div>
-                    <div class="p-1 bg-yellow-950 my-5"></div>
+
+                    <div class="p-1 bg-yellow-950 mx-5 sm:my-5 xl:mx-0"></div>
 
                     <!-- Question 1 -->
-                    <div class="sm:w-3/6 flex flex-col justify-center text-center py-10 px-20">
-                        <div class="flex flex-col justify-center">
-                            <h3 class="text-3xl font-bold py-2">Question 1</h3>
-                            <p class="py-3 font-semibold mx-auto w-4/6">1. Who is the organizer of the bootcamp that I joined?</p>
-                            <div class="text-left px-32">
-                                <input class="mt-5" type="radio" name="question6"> Harisenin.com<br>
-                                <input class="mt-5" type="radio" name="question6"> Hariselasa.com<br>
-                                <input class="mt-5" type="radio" name="question6"> Harirabu.com<br>
-                                <input class="mt-5" type="radio" name="question6"> Harisabtu.com<br>
+                    <div class="xl:w-3/6 flex flex-col justify-center text-center py-10 px-20" id="question-box-6">
+                        <div class="flex flex-col">
+                            <h3 class="text-xl xl:text-3xl font-bold py-2">Question 1</h3>
+                            <p class="py-3 font-semibold">1. Who is the organizer of the bootcamp that I joined?</p>
+                            <div class="flex flex-col item-center text-left mx-auto">
+                                <span class="py-2">
+                                    <input type="checkbox" name="question6" id="correct6"> Harisenin.com
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question6"> Hariselasa.com
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question6"> Harirabu.com
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question6"> Harisabtu.com
+                                </span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Question 2 -->
-                    <div class="hidden sm:w-3/6 flex flex-col justify-center text-center py-10 px-20">
-                        <div class="flex flex-col justify-center">
-                            <h3 class="text-3xl font-bold py-2">Question 2</h3>
-                            <p class="py-3 font-semibold w-4/6 mx-auto">2. What is the name of the CSS framework used to create this landing page?</p>
-                            <div class="text-left px-32">
-                                <input class="mt-5" type="radio" name="question7"> Bootstrap<br>
-                                <input class="mt-5" type="radio" name="question7"> React JS<br>
-                                <input class="mt-5" type="radio" name="question7"> Sass<br>
-                                <input class="mt-5" type="radio" name="question7"> Tailwind<br>
+                    <div class="hidden xl:w-3/6 flex flex-col justify-center text-center py-10 px-20" id="question-box-7">
+                        <div class="flex flex-col">
+                            <h3 class="text-xl xl:text-3xl font-bold py-2">Question 2</h3>
+                            <p class="py-3 font-semibold text-sm">2. What is the name of the CSS framework used to create this landing page?</p>
+                            <div class="flex flex-col item-center text-left mx-auto">
+                                <span class="py-2">
+                                    <input type="checkbox" name="question7"> Bootstrap
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question7"> React JS
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question7"> Sass
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question7" id="correct7"> Tailwind
+                                </span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Question 3 -->
-                    <div class="hidden sm:w-3/6 flex flex-col justify-center text-center py-10 px-20">
-                        <div class="flex flex-col justify-center">
-                            <h3 class="text-3xl font-bold py-2">Question 3</h3>
-                            <p class="py-3 font-semibold w-4/6 mx-auto">3. How long is the duration of my bootcamp?</p>
-                            <div class="text-left px-32">
-                                <input class="mt-5" type="radio" name="question8"> 3 months<br>
-                                <input class="mt-5" type="radio" name="question8"> 6 months<br>
-                                <input class="mt-5" type="radio" name="question8"> 9 months<br>
-                                <input class="mt-5" type="radio" name="question8"> 1 year<br>
+                    <div class="hidden xl:w-3/6 flex flex-col justify-center text-center py-10 px-20" id="question-box-8">
+                        <div class="flex flex-col">
+                            <h3 class="text-xl xl:text-3xl font-bold py-2">Question 3</h3>
+                            <p class="py-3 font-semibold">3. How long is the duration of my bootcamp?</p>
+                            <div class="flex flex-col item-center text-left mx-auto">
+                                <span class="py-2">
+                                    <input type="checkbox" name="question8"> 3 months
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question8" id="correct8"> 6 months
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question8"> 9 months
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question8"> 1 year
+                                </span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Question 4 -->
-                    <div class="hidden sm:w-3/6 flex flex-col justify-center text-center py-10 px-20">
-                        <div class="flex flex-col justify-center">
-                            <h3 class="text-3xl font-bold py-2">Question 4</h3>
-                            <p class="py-3 font-semibold w-4/6 mx-auto">4. Where do I attend this bootcamp?</p>
-                            <div class="text-left px-32">
-                                <input class="mt-5" type="radio" name="question9"> Jakarta<br>
-                                <input class="mt-5" type="radio" name="question9"> Blora<br>
-                                <input class="mt-5" type="radio" name="question9"> Anywhere<br>
-                                <input class="mt-5" type="radio" name="question9"> Bootcamp Office<br>
+                    <div class="hidden xl:w-3/6 flex flex-col justify-center text-center py-10 px-20" id="question-box-9">
+                        <div class="flex flex-col">
+                            <h3 class="text-xl xl:text-3xl font-bold py-2">Question 4</h3>
+                            <p class="py-3 font-semibold">4. Where do I attend this bootcamp?</p>
+                            <div class="flex flex-col item-center text-left mx-auto">
+                                <span class="py-2">
+                                    <input type="checkbox" name="question9"> Jakarta
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question9"> Blora
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question9" id="correct9"> Anywhere
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question9"> Bootcamp Office
+                                </span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Question 5 -->
-                    <div class="hidden sm:w-3/6 flex flex-col justify-center text-center py-10 px-20">
-                        <div class="flex flex-col justify-center">
-                            <h3 class="text-3xl font-bold py-2">Question 5</h3>
-                            <p class="py-3 font-semibold w-4/6 mx-auto">5. How many times did you refresh the page before reaching this question?</p>
-                            <div class="text-left px-32">
-                                <input class="mt-5" type="radio" name="question10"> 0-2 times<br>
-                                <input class="mt-5" type="radio" name="question10"> 4-6 times<br>
-                                <input class="mt-5" type="radio" name="question10"> 7-9 times<br>
-                                <input class="mt-5" type="radio" name="question10"> 10 times or more <br>
+                    <div class="hidden xl:w-3/6 flex flex-col justify-center text-center py-10 px-20" id="question-box-10">
+                        <div class="flex flex-col">
+                            <h3 class="text-xl xl:text-3xl font-bold py-2">Question 5</h3>
+                            <p class="py-2 font-semibold">5. How many times did you refresh the page before reaching this question?</p>
+                            <div class="flex flex-col item-center text-left mx-auto">
+                                <span class="py-2">
+                                    <input type="checkbox" name="question10" id="correct10"> 0-2 times
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question10"> 4-6 times
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question10"> 7-9 times
+                                </span>
+                                <span class="py-2">
+                                    <input type="checkbox" name="question10"> 10 times or more 
+                                </span>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Button Submit -->
+                    <div class="hidden xl:w-3/6 flex flex-col justify-center text-center py-10 px-20" id="button-quiz-result">
+                        <div class="flex flex-col">
+                            <h3 class="text-xl xl:text-3xl font-bold py-2">You have finished</h3>
+                            <a href="#result">
+                                <button class="py-3 font-semibold w-4/6 mx-auto bg-slate-900 text-grayLight" type="submit" name="submit" onclick="result()">View Score</button>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- result -->
-            <div class="hidden flex h-fit px-10 py-10 justify-center items-center bg-grayDarker text-black rounded-lg lg:flex-row xl:h-screen" id="result">
-                <div class="flex w-3/6 justify-center items-center bg-white rounded border-8 border-black">
-                    <div class="flex flex-col justify-center text-center py-10 px-20">
-                        <h1 class="text-6xl font-bold text-slate-900 py-2 underline underline-offset-8">Result</h1>
-                        <p class="text-3xl py-3">Your Score is</p>
+            <div class="hidden flex flex-col h-screen px-10 py-10 justify-center items-center bg-gray-900 text-black xl:flex-row sm:h-screen" id="result">
+                <div class="flex flex-col xl:flex-row w-4/6 xl:w-3/6 bg-white rounded border-8 border-black items-center justify-center">
+                    <div class="flex flex-col justify-center text-center py-5 px-20">
+                        <h1 class="text-3xl lg:text-6xl font-bold text-slate-900 py-2 underline underline-offset-8">Result</h1>
+                        <p class="text-lg lg:text-3xl pt-3">Your Score is</p>
                     </div>
-                    <div class="flex flex-col justify-center text-center py-10 px-20">
-                        <h1 class="text-6xl font-bold text-slate-900 py-2 underline underline-offset-8" id="total-score"></h1>
-                        <p class="text-2xl py-3">Congrats and thank you for doing the quiz! &#10024; </p>
+                    <div class="flex flex-col items-center justify-center text-center py-2 lg:py-5 px-16">
+                        <h1 class="text-2xl lg:text-4xl font-bold text-slate-900 py-2 underline underline-offset-8" id="total-score"></h1>
+                        <p class="text-sm lg:text-base pt-3 pb-5">Congrats and thank you for doing the quiz! &#10024; </p>
                     </div>
                 </div>
             </div>

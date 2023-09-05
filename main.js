@@ -8,17 +8,17 @@
 */
 
 // Prompt and Alert before starting the game
-// let rules = prompt("How many times do you refresh this page? ( 0 - 10 )");
+let rules = prompt("How many times do you refresh this page? ( 0 - 10 )");
 
-// if (rules >= 0 && rules < 4) {
-//     alert("Okay, go ahead!")
+if (rules >= 0 && rules < 4 && rules != "") {
+    alert("Okay, go ahead!")
 
-// } else if (rules >=4 && rules <= 10) {
-//     alert("You have lost! The limit is 3 times :(")
+} else if (rules >=4 && rules <= 10) {
+    alert("You have lost! The limit is 3 times :(")
 
-// } else {
-//     alert("Refresh the page again and input the correct number, your chance is limited")
-// }
+} else {
+    alert("Refresh the page again and input the correct number, your chance is limited")
+}
 
 
 // Show local time
@@ -80,4 +80,132 @@ setTimeout(function() {
 }, 7000);
 
 
-//
+// Make a quiz
+
+// Quiz 1
+let questionHidden1 = document.querySelector('#question-box-1');
+let questionHidden2 = document.querySelector('#question-box-2');
+let questionHidden3 = document.querySelector('#question-box-3');
+let questionHidden4 = document.querySelector('#question-box-4');
+let questionHidden5 = document.querySelector('#question-box-5');
+let buttonQuizHidden = document.querySelector('#button-quiz-2');
+
+let questionOne = document.querySelectorAll('input[name="question1"]');
+let questionTwo = document.querySelectorAll('input[name="question2"]');
+let questionThree = document.querySelectorAll('input[name="question3"]');
+let questionFour = document.querySelectorAll('input[name="question4"]');
+let questionFive = document.querySelectorAll('input[name="question5"]');
+
+// Quiz 2
+let questionHidden21 = document.querySelector('#question-box-6');
+let questionHidden22 = document.querySelector('#question-box-7');
+let questionHidden23 = document.querySelector('#question-box-8');
+let questionHidden24 = document.querySelector('#question-box-9');
+let questionHidden25 = document.querySelector('#question-box-10');
+let buttonQuizHidden2 = document.querySelector('#button-quiz-result');
+
+let questionOne2 = document.querySelectorAll('input[name="question6"]');
+let questionTwo2 = document.querySelectorAll('input[name="question7"]');
+let questionThree2 = document.querySelectorAll('input[name="question8"]');
+let questionFour2 = document.querySelectorAll('input[name="question9"]');
+let questionFive2 = document.querySelectorAll('input[name="question10"]');
+
+// Result section
+let totalScorePage = document.querySelector('#result')
+
+// Function to move on to the next next question and to get the result
+let score = 0;
+
+for (let i = 0; i <= 3; i++) {
+    
+    // Quiz 1
+    questionOne[i].addEventListener('change', function(e) {
+        if (e.target.checked) {
+        questionHidden1.classList.add('hidden');
+        questionHidden2.classList.remove('hidden');
+        if (questionOne[3].checked) {
+            score++;
+        }
+    }});
+    questionTwo[i].addEventListener('change', function(e) {
+        if (e.target.checked) {
+        questionHidden2.classList.add('hidden');
+        questionHidden3.classList.remove('hidden');
+        if (questionTwo[2].checked) {
+            score++;
+        }
+    }});
+    questionThree[i].addEventListener('change', function(e) {
+        if (e.target.checked) {
+        questionHidden3.classList.add('hidden');
+        questionHidden4.classList.remove('hidden');
+        if (questionThree[0].checked) {
+            score++;
+        }
+    }});
+    questionFour[i].addEventListener('change', function(e) {
+        if (e.target.checked) {
+        questionHidden4.classList.add('hidden');
+        questionHidden5.classList.remove('hidden');
+        if (questionFour[2].checked) {
+            score++;
+        }
+    }});
+    questionFive[i].addEventListener('change', function(e) {
+        if (e.target.checked) {
+        questionHidden5.classList.add('hidden');
+        buttonQuizHidden.classList.remove('hidden');
+        if (questionFive[1].checked) {
+            score++;
+        }
+    }});
+    
+    // Quiz 2
+    questionOne2[i].addEventListener('change', function(e) {
+        if (e.target.checked) {
+        questionHidden21.classList.add('hidden');
+        questionHidden22.classList.remove('hidden');
+        if (questionOne2[0].checked) {
+            score++;
+        }
+    }});
+    questionTwo2[i].addEventListener('change', function(e) {
+        if (e.target.checked) {
+        questionHidden22.classList.add('hidden');
+        questionHidden23.classList.remove('hidden');
+        if (questionTwo2[3].checked) {
+            score++;
+        }
+    }});
+    questionThree2[i].addEventListener('change', function(e) {
+        if (e.target.checked) {
+        questionHidden23.classList.add('hidden');
+        questionHidden24.classList.remove('hidden');
+        if (questionThree2[1].checked) {
+            score++;
+        }
+    }});
+    questionFour2[i].addEventListener('change', function(e) {
+        if (e.target.checked) {
+        questionHidden24.classList.add('hidden');
+        questionHidden25.classList.remove('hidden');
+        if (questionFour2[2].checked) {
+            score++;
+        }
+    }});
+    questionFive2[i].addEventListener('change', function(e) {
+        if (e.target.checked) {
+        questionHidden25.classList.add('hidden');
+        buttonQuizHidden2.classList.remove('hidden');
+        if (questionFive2[0].checked) {
+            score++;
+        }
+    }});
+};
+
+function result() {
+    let totalScore = document.getElementById('total-score')
+    totalScorePage.classList.remove('hidden');
+    totalScore.innerHTML = `${score} / 10`;
+};
+
