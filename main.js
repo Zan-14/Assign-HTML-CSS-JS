@@ -1,32 +1,39 @@
 /* 
+Version 2
+
 I am using CLI Tailwind (Not CDN)
 
-Features that use JavaScript:
+Features that I will build using JavaScript:
 
-1. Prompt before showing the landing page
-- prompt
-- if statement > else if statement
+1. Authentication features (Registers > Login and Passwords)
+description: 
+a. Register username and password before login : > Set the rules of the data (minimal letters and numbers)
+b. Login with the data that matches with the registration: Set the rules with data must be filled and correct
+c. Set 
 
-2. Show current time (real time)
+
+
+List of previous versions
+* Show current time (real time)
 - Get elements from DOM
 - setInterval function 
 
-3. Hamburger button
+* Hamburger button
 - Get elements from DOM
 - addEventListener method with if else statement in it
 - Change the SVG element every click (function in number 4)
 
-4. Change navbar color when scrolling 
+* Change navbar color when scrolling 
 - Get elements from DOM
 - window scrollY function
 - Nested if statement
 
-5.Erase a certain text after a certain amount of time
+* Erase a certain text after a certain amount of time
 - setTimeout function
 - Get elements from DOM
 - Manipulate tailwind class
 
-6. Create a mini quiz
+* Create a mini quiz
 - Get elements from DOM
 - for loop with nested function in it
 - Locate date from an array (DOM Note List)
