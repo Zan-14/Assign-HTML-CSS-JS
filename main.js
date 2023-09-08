@@ -1,15 +1,36 @@
 /* 
-Version 2
+Version 2.0
 
 I am using CLI Tailwind (Not CDN)
 
-Features that I will build using JavaScript:
+Features that I am going to build using JavaScript:
 
 1. Authentication features (Registers > Login and Passwords)
 description: 
-a. Register username and password before login : > Set the rules of the data (minimal letters and numbers)
+a. Register username and password before login : Set the rules of the data (minimal letters and numbers)
 b. Login with the data that matches with the registration: Set the rules with data must be filled and correct
-c. Set 
+c. Store the registration information
+d. Redirect to the landing page to start the quiz
+
+2. Countdown features
+description:
+a. After login, the user will read a text that ask them to click the button when they are ready
+b. After clicking the button, the information will be displayed for 7 seconds and there is a countdown timer in the information
+c. After the countdown timer is over, the information will disappear and the user will ask to click the quiz button to start the quiz.
+
+3. Quiz features
+description:
+a. There are 10 questions that divided into 2 quiz sections.
+b. User can only choose one of the answers (radio buttons).
+c. There are next and previous buttons that help the user navigates
+d. Each question has 10 score, so the total score is 100
+Note and rules:
+- Use JavaScript to generate the questions, not in HTML (use array or object)
+- Try to use the best solution to show the questions and validate the answers
+- Learn how to manipulate array and object
+
+4. Next features coming soon in the next version...
+
 
 
 
